@@ -1,0 +1,33 @@
+@import "bootstrap";
+
+.header {
+    text-align: center;
+    background: url('test.jpg');
+    background-size: cover;
+    padding: 50px;
+    margin: 0px;
+    font-family: 'Goudy Bookletter 1911', serif;
+}
+
+.content {
+    margin: 40px;
+    font-family: 'Goudy Bookletter 1911', serif;
+
+}
+
+.color {
+    color: brown;
+    font-size: 50px;
+    margin-bottom: 0px;
+    text-align: center;
+    font: bold;
+}
+
+
+
+.welcome {
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
