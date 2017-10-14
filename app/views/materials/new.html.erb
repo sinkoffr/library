@@ -1,0 +1,9 @@
+<h1>Please add your new material item below:</h1>
+
+<%= simple_form_for @material do |f| %>
+  <%= f.input :title %>
+  <%= f.input :author %>
+  <%= f.input :description %>
+  <%= f.input :cover_art %>
+  <%= f.button :submit %>
+<% end %>
