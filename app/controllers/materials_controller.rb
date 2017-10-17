@@ -1,4 +1,6 @@
 class MaterialsController < ApplicationController
+  
+  
   def index
     @material = Material.first
   end
@@ -14,7 +16,7 @@ class MaterialsController < ApplicationController
   end
   
   def show
-    @material - Material.last
+    @material = Material.all
   end
   
   

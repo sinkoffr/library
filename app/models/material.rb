@@ -1,5 +1,5 @@
 class Material < ApplicationRecord
-    validates :title, :author, :description, :cover_art, presence: true
+    validates :title, :author, :description, presence: true
     
     def new
         @material = Material.new
