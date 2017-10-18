@@ -1,5 +1,6 @@
 <h1>Please add your new material item below:</h1>
 
+<div class="col-10 offset-1">
 <%= simple_form_for @material do |f| %>
   <%= f.input :title %>
   <%= f.input :author %>
@@ -7,3 +8,4 @@
   <%= f.input :cover_art %>
   <%= f.button :submit %>
 <% end %>
+</div>
