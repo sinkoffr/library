@@ -2,7 +2,7 @@ class MaterialsController < ApplicationController
   
   
   def index
-    @material = Material.first
+    @material = Material.all
   end
   
   def new

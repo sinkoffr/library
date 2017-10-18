@@ -1,9 +1,12 @@
 <h1>My Materials</h1>
-<br /><br />
+<br />
 
-<h3><%= @material.title %></h3>
-<h5>
-    <%= @material.author %>
-    <br />-<%= @material.description %>
-</h5>
+<%= @material.each do |item| %>
+    <h3><%= item.title %></h3>
+    <h5>
+        <%= item.author %>
+        <br />-<%= item.description %>
+    </h5>
+    <br /><br />
+<% end %>
 
