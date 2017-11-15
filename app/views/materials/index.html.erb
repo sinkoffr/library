@@ -1,12 +1,19 @@
-<h1>My Materials</h1>
+<h1 class="text-center">My Materials</h1>
 <br />
 
-<%= @material.each do |item| %>
-    <h3><%= item.title %></h3>
-    <h5>
-        <%= item.author %>
-        <br />-<%= item.description %>
-    </h5>
-    <br /><br />
-<% end %>
-
+<div class="format-box col-11 offset-1">
+    <% if current_user %>
+        <% @material.each do |item| %>
+            <h3><%= item.title %></h3>
+            <h5>
+                <%= item.author %>
+                <br />-<%= item.description %>
+            </h5>
+            <br />
+        <% end %>
+    <% end %>
+</div>
+<br />
+<%= link_to "New Book", new_material_path %>
+<br />
+<%= link_to "Home Page", root_path %>

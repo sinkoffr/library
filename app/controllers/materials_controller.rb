@@ -1,18 +1,23 @@
 class MaterialsController < ApplicationController
-  
+  before_action :authenticate_user! 
   
   def index
     @material = Material.all
+    
   end
   
   def new
     @material = Material.new
+    
   end
   
   def create
-    @material = Material.create(material_params)
-    
-    redirect_to materials_index_path
+    current_user.materials.create(material_params)
+    if @material.user != current_user
+      return render plain: 'Unauthorized', status: :unauthorized
+    else
+      redirect_to materials_index_path
+    end
   end
   
   def show

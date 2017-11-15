@@ -10,7 +10,30 @@
 
   <body>
     <header class="header">
+    <br />
     <h1 class="title">MY PERSONAL LIBRARY</h1>
+    
+    <nav class="navbar navbar-toggleable-md">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav col-2 offset-10">
+          <% if user_signed_in? %>
+            <li class="nav-item">
+              <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
+            </li>
+          <% else %>
+            <li class="nav-item">
+              <%= link_to 'Sign In', new_user_session_path, class: 'nav-link' %>
+            </li>
+            <li class="nav-item">
+              <%= link_to 'Sign Up', new_user_registration_path, class: 'nav-link' %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </nav>
     </header>
     
     <% if notice.present? %>
