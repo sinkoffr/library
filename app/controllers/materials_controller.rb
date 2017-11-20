@@ -2,8 +2,9 @@ class MaterialsController < ApplicationController
   before_action :authenticate_user! 
   
   def index
-    @material = Material.all
-    
+  
+    @materials = current_user.materials
+    # @materials = Material.where(user_id: current_user.id)
   end
   
   def new
@@ -28,6 +29,7 @@ class MaterialsController < ApplicationController
   private
     def material_params
       params.require(:material).permit(:title, :author, :description, :cover_art)
-      
     end
+    
+    
 end

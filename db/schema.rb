@@ -10,10 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171028181354) do
+ActiveRecord::Schema.define(version: 20171120001906) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "alter_materials_remove_material_ids", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "materials", force: :cascade do |t|
     t.string   "title"
@@ -22,7 +27,6 @@ ActiveRecord::Schema.define(version: 20171028181354) do
     t.string   "cover_art"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.integer  "material_id"
     t.integer  "user_id"
     t.index ["user_id"], name: "index_materials_on_user_id", using: :btree
   end
