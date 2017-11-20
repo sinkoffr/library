@@ -14,11 +14,7 @@ class MaterialsController < ApplicationController
   
   def create
     current_user.materials.create(material_params)
-    if @material.user != current_user
-      return render plain: 'Unauthorized', status: :unauthorized
-    else
-      redirect_to materials_index_path
-    end
+    redirect_to materials_path
   end
   
   def show
