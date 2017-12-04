@@ -21,7 +21,6 @@ class MaterialsController < ApplicationController
     @material = Material.all
   end
   
-  
   private
     def material_params
       params.require(:material).permit(:title, :author, :description, :cover_art)
