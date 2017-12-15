@@ -3,11 +3,11 @@
         
 [X] Must be signed 
         in to view catalogs - done
-        to add items - done
+        to add items
 
-Current catalog page
+My Catalogs page
         dropdown of catalogs
-        add catalog link/buttons
+        "add catalog" link/buttons
     
 Books I own page
         Header

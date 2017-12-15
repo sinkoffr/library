@@ -2,14 +2,11 @@ class MaterialsController < ApplicationController
   before_action :authenticate_user! 
   
   def index
-  
-    @materials = current_user.materials
-    # @materials = Material.where(user_id: current_user.id)
+    @materials = current_user.materials.order(:title)
   end
   
   def new
     @material = Material.new
-    
   end
   
   def create
