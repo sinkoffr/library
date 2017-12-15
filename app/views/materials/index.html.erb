@@ -1,8 +1,7 @@
 <h1 class="text-center">My Books</h1>
 <br />
 
-<div class="format-box col-11 offset-1">
-    <div class="col-11">
+<div class="format-box col-11 offset-1 content">
     <% if current_user %>
         <% @materials.each do |item| %>
             <div class="boxy"
@@ -16,9 +15,8 @@
             <br />
         <% end %>
     <% end %>
-    </div>
+    <br />
+    <%= link_to "New Book", new_material_path %>
+    <br />
+    <%= link_to "Home Page", root_path %>
 </div>
-<br />
-<%= link_to "New Book", new_material_path %>
-<br />
-<%= link_to "Home Page", root_path %>
