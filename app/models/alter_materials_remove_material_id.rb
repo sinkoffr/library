@@ -1,2 +1,0 @@
-class AlterMaterialsRemoveMaterialId < ApplicationRecord
-end

@@ -1,12 +1,12 @@
-class Material < ApplicationRecord
+class Book < ApplicationRecord
     validates :title, :author, :description, presence: true
     belongs_to :user
     
     def new
-        @material = Material.new
+        @book = Book.new
     end
     
     def index
-       @item = Material.index
+       @item = Book.index
     end
 end

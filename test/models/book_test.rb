@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class CatalogsControllerTest < ActionDispatch::IntegrationTest
+class BookTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
