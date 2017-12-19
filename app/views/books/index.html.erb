@@ -1,8 +1,7 @@
 <h1 class="text-center">My Books</h1>
 <br />
 
-<div class="format-box col-11 offset-1">
-    <div class="col-11">
+<div class="format-box col-11 offset-1 content">
     <% if current_user %>
         <% @books.each do |item| %>
             <div class="boxy"
@@ -16,7 +15,6 @@
             <br />
         <% end %>
     <% end %>
-    </div>
 </div>
 <br />
 <%= link_to "New Book", new_book_path %>
