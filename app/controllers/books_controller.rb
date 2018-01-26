@@ -3,6 +3,7 @@ class BooksController < ApplicationController
   
   def index
     @books = current_user.books.order(:title)
+    @book = Book.new
   end
   
   def new

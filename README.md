@@ -17,6 +17,8 @@ My Catalogs page (currently set to books#index)
                 - choosing one will link to that catalog (will be added at a later date)
         add a "add catalog" button to personal page
     
+Add pagination
+
 Books I own page
         Header - done
         links to sort by: (title, author, genre, date added, etc.)
@@ -28,12 +30,12 @@ Add a new item page (/.../new)
                 -[] CDs
                 -[] DVDs
                 -[]etc...
-        move for of information to be added into modal
+        move form into modal - done for books
     
 make genre a dropdown at all applicable locations
 
 alphabetize by:
-        Author last name
+        Author last name (user option)
         Title (default) - done
 
 add google books API
