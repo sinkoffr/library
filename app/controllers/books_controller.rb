@@ -2,7 +2,8 @@ class BooksController < ApplicationController
   before_action :authenticate_user! 
   
   def index
-    @books = current_user.books.order(:title)
+    @books = Book.paginate(:page => params[:page], :per_page => 10)
+    
     @book = Book.new
   end
   
