@@ -17,7 +17,7 @@ My Catalogs page (currently set to books#index)
                 - choosing one will link to that catalog (will be added at a later date)
         add a "add catalog" button to personal page
     
-Add pagination
+[X] Add pagination
 
 Books I own page
         Header - done
