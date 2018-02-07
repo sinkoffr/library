@@ -23,6 +23,11 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
   end
   
+  def google_api_search
+    books = GoogleBooks.get_by_title(params[:search])
+    render json: books
+  end
+  
   private
     def book_params
       params.require(:book).permit(:title, :author, :description, :cover_art)

@@ -14,3 +14,20 @@
 <br />
 <%= link_to "Return to My Library", books_path %>
 <br />
+
+<script>
+  $('#book_title').on("keyup", function(event){
+    var queryString = $(this).val();
+    console.log("text changing", queryString);
+    if(queryString.length > 4){
+      $.get("/books/google_api_search/" + queryString, function(data){
+        console.log(data);
+        var bookTitles = data.items.map(function(book){
+          return book.volumeInfo.title;
+        })
+        console.log(bookTitles);
+      })
+      
+    }
+  })
+</script>
