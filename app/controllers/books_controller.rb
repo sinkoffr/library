@@ -25,7 +25,7 @@ class BooksController < ApplicationController
   
   def google_api_search
     books = GoogleBooks.get_by_title(params[:search])
-    render json: books
+    render json: books["items"].map{ |book| book["volumeInfo"] }
   end
   
   private
