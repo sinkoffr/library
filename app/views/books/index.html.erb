@@ -1,25 +1,60 @@
 <h1 class="text-center">My Books</h1>
-<br />
 
-<div class="format-box col-11 offset-1 content">
-    <% if current_user %>
-        <% @books.each do |item| %>
-            <div class="boxy" >
-<!--Change link path to where the book information can be found!!!            -->                
-            <h3><%=link_to item.title, book_path(@books) %></h3>
-            <%= image_tag item.cover_art, class:'img-fluid' %>
-            <br />
-            <h5>
-                <%= item.author %>
-                <br />-<%= item.description %>
-            </h5>
-            <br />
-            </div>
-            <br />
-        <% end %>
-    <% end %>
+<div class="text-center">
+  <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal">
+    Add a Book
+  </button>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add a Book</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <%= simple_form_for @book do |f| %>
+        <div class="modal-body">
+          <%= f.input :title %>
+          <%= f.input :author %>
+          <%= f.input :description %>
+          <%= f.input :cover_art %>
+        
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <%= f.button :submit %>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>
 <br />
-<%= link_to "New Book", new_book_path %>
-<br />
+<!-- END Modal -->
+
+<div class="format-box col-11 offset-1 content">
+  <% if current_user %>
+    <%= will_paginate @books %>
+    <% @books.each do |item| %>
+      <div class="boxy" >
+      <h3><%=link_to item.title, book_path(@books) %></h3>
+      <%= image_tag item.cover_art, class:'img-fluid' %>
+      <br />
+      <h5>
+        <%= item.author %>
+        <br />-<%= item.description %>
+      </h5>
+      <br />
+      </div>
+      <br />
+    <% end %>
+    <%= will_paginate @books %>
+  <% end %>
+</div>
+
 <%= link_to "Home Page", root_path %>
+<br />
+<br />
