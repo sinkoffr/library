@@ -66,3 +66,31 @@ body {
     text-align: center;
     font-weight: 600;
 }
+
+.pagination {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.pagination span {
+    color: purple;
+    font-weight: 400;
+}
+
+a.previous_page {
+    color: purple;
+    margin-left: auto;
+}
+
+a.next_page {
+    color: purple;
+    margin-left: auto;
+}
+
+.pagination a {
+    color: purple;
+}
+
+em.current {
+    color: black;
+}

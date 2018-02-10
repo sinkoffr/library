@@ -1,7 +1,7 @@
 $(document).ready(function(){
   console.log('here')
   var booksDataSource = new Bloodhound({
-    datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
+    datumTokenizer: Bloodhound.tokenizers.obj.whitespace('title'),
     queryTokenizer: Bloodhound.tokenizers.whitespace,
     // prefetch: '../data/films/post_1960.json',
     remote: {
@@ -19,13 +19,14 @@ $(document).ready(function(){
   });
   console.log("Test1");
   
-  $('#book_title').on('typeahead:selected', function(evt, item) {
+  $('#book_title').on('typeahead:select', function(evt, item) {
       console.log("test");
       var authors = item.authors.join();
       var description = item.description; 
       $('#book_author').val(authors)
       $('#book_description').val(description)
       // do what you want with the item here
+      console.log("tessting");
   });
   console.log("test2");
 });
