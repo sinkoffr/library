@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  console.log('here')
   var booksDataSource = new Bloodhound({
     datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
     queryTokenizer: Bloodhound.tokenizers.whitespace,
@@ -8,6 +9,7 @@ $(document).ready(function(){
       wildcard: '%QUERY'
     }
   });
+  console.log('2');
   
   $('#book_title').typeahead(null, {
     name: 'best-titles',
