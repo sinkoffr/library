@@ -11,6 +11,11 @@
     height: 200px;
 }
 
+h1.text-center {
+    color: #447c5f;
+}
+
+
 .content {
     margin: 40px;
     font-family: 'Goudy Bookletter 1911', serif;
@@ -73,24 +78,29 @@ body {
 }
 
 .pagination span {
-    color: purple;
+    color: #447c5f;
     font-weight: 400;
 }
 
 a.previous_page {
-    color: purple;
+    color: #447c5f;
     margin-left: auto;
 }
 
 a.next_page {
-    color: purple;
+    color: #447c5f;
     margin-left: auto;
 }
 
 .pagination a {
-    color: purple;
+    color: #447c5f;
 }
 
 em.current {
     color: black;
+}
+
+button.btn.btn-link {
+    color: #266344;
+    text-decoration: underline;
 }

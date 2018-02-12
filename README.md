@@ -38,5 +38,5 @@ alphabetize by:
         Author last name (user option)
         Title (default) - done
 
-add google books API
+[X] add google books API
         
