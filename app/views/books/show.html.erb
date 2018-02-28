@@ -1,18 +1,19 @@
 <div class="format-box col-11 offset-1 content">
   <% if current_user %>
-    <%= @book.title %><br />
+    <h1><%= @book.title %><br /></h1>
     <%= image_tag @book.cover_art, class: 'img-fluid' %>
     <h5>
       <br /> <br />
       <%= @book.author %>
+      <br />
+      <%= @book.genre %>
+      <br /><br />
       <br />-<%= @book.description %>
     </h5>
     <br />
   <% end %>
 </div>
 <br />
-<%= link_to "New Book", new_book_path %>
-<br />
-<%= link_to "My Books", books_index_path %>
+
 <br />
 <%= link_to "Home Page", root_path %>

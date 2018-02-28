@@ -4,7 +4,6 @@ class BooksController < ApplicationController
   def index
     @books = current_user.books.order(:title).paginate(:page => params[:page], :per_page => 10)
     @book = Book.new
-
   end
   
   def new
@@ -32,7 +31,7 @@ class BooksController < ApplicationController
   
   private
     def book_params
-      params.require(:book).permit(:title, :author, :description, :cover_art)
+      params.require(:book).permit(:title, :author, :description, :genre, :cover_art)
     end
   
 end

@@ -20,6 +20,7 @@
         <div class="modal-body">
           <%= f.input :title %>
           <%= f.input :author %>
+          <%= f.input :genre %>
           <%= f.input :description %>
           <%= f.input :cover_art %>
         
@@ -40,12 +41,13 @@
     <%= will_paginate @books %>
     <% @books.each do |item| %>
       <div class="boxy" >
-      <h3><%=link_to item.title, book_path(@books) %></h3>
+      <h3><%= link_to item.title, book_path(item.id) %></h3>
       <%= image_tag item.cover_art, class:'img-fluid' %>
       <br />
       <h5>
         <%= item.author %>
-        <br />-<%= item.description %>
+        <br /><br /><%= item.genre %>
+        <br /><%= item.description %>
       </h5>
       <br />
       </div>
