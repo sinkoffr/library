@@ -1,5 +1,6 @@
 class GoogleBooks
    def self.get_by_title(title)
+       title = title.gsub(" ", "")
        api_key = "AIzaSyCeelIchvzHQd8Yji9XCZe5NtwLAQkRTzg"
        base_url = "https://www.googleapis.com/books/v1/volumes"
        url = "#{base_url}?q=#{title}&key=#{api_key}"
